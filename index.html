@@ -25,7 +25,7 @@
 		}
 		.content {
 			background-color: #FFFFFF;
-			min-height: 300px;
+			min-height: 600px;
 			width: 1000px;
 		}
 		.tengah{
@@ -42,7 +42,6 @@
 			background-color: #80DB72;
 			height: 50px;
 			width: 100px;
-			border: 2px solid #80DB72;
 			border-top-left-radius: 15px;
 			border-bottom-left-radius: 15px;
 			text-align: center;
@@ -51,27 +50,78 @@
 			background-color: #6DBCCF;
 			height: 50px;
 			width: 100px;
-			border: 2px solid #6DBCCF;
 			text-align: center;
 		}
 		.desktop{
 			background-color: #E27B78;
 			height: 50px;
 			width: 100px;
-			border: 2px solid #E27B78;
 			border-top-right-radius: 15px;
 			border-bottom-right-radius: 15px;
 			text-align: center;
 		}
 
 		/* input */
-		input{
+		.inputan{
 			height: 30px;
 			width: 200px;
 			margin: 0 0 0 100px;
-			background;
       		border:1px solid #ccc;
 			border-radius: 5px;
+		}
+		.wrapper{
+			display: flex;	
+			justify-content: center;
+			margin: 10px;
+		}
+		button{
+			height: 38px;
+			width: 100px;
+			margin: 0 0 0 148px;
+			background-color: #80DB72;
+			border: none;
+			border-radius: 7px;
+			color: white;
+		}
+		
+		/* content */
+		.content{
+			display: flex;
+			justify-content: flex-end;
+		}
+		.header-judul{
+			margin: 40px 180px 0 0;
+		}
+		.button-tambah{
+			margin: 40px 20px 0 0;
+		}
+		table, tr{
+			border: 1px solid gray;
+			border-collapse: collapse;
+			text-align: center;
+		}
+		th{
+	
+			background-color: #80DB72;
+			color: white;
+		}
+		th, td {
+			padding: 5px;
+		}
+		.button-edit{
+			margin: 0 5px 0 5px;
+			width: auto;
+			height: 30px;
+			background-color: #EBCA34;
+		}
+		.button-hapus{
+			margin: 0 5px 0 5px;
+			width: auto;
+			height: 30px;
+			background-color: #B25959;
+		}
+		tr:nth-child(even) {
+			background-color: #F4F4F4;
 		}
 	</style>
 </head>
@@ -92,9 +142,65 @@
 				</div>
 			</div>
 			<hr style="width: 300px; margin-top: 40px; margin-bottom: 40px;">
-			<input type="input" name="input">
+			<input type="input" name="input" class="inputan"><br>
+			<div class="wrapper">
+				<input type="radio" name="gender" value="male" checked> Web<br>
+				<input type="radio" name="gender" value="female"> Desktop<br>
+				<input type="radio" name="gender" value="other"> Mobile<br><br>
+			</div>
+			<button>Simpan</button>
 		</div>
-		<div class="content"></div>
+
+		<div class="content">
+			<table style="width: 100%; margin: 0 20px 0 20px;">
+				<caption style="margin: 20px 0 10px 250px;">Total Kumpulan Data Survey <button></button></caption>
+				<tr>
+					<th style="width: 20%">Nama</th>
+					<th style="width: 60%">Kategory</th>
+					<th>Aksi</th>
+				</tr>
+				<tr>
+					<td>Ramadhani</td>
+					<td>Web</td>
+					<td><button class="button-edit">Edit</button><button class="button-hapus">Hapus</button></td>
+				</tr>
+				<tr>
+					<td>Gatot</td>
+					<td>Mobile</td>
+					<td><button class="button-edit">Edit</button><button class="button-hapus">Hapus</button></td>
+				</tr>
+				<tr>
+					<td>Ramadhani</td>
+					<td>Web</td>
+					<td><button class="button-edit">Edit</button><button class="button-hapus">Hapus</button></td>
+				</tr>
+				<tr>
+					<td>Gatot</td>
+					<td>Mobile</td>
+					<td><button class="button-edit">Edit</button><button class="button-hapus">Hapus</button></td>
+				</tr>
+				<tr>
+					<td>Ramadhani</td>
+					<td>Web</td>
+					<td><button class="button-edit">Edit</button><button class="button-hapus">Hapus</button></td>
+				</tr>
+				<tr>
+					<td>Gatot</td>
+					<td>Mobile</td>
+					<td><button class="button-edit">Edit</button><button class="button-hapus">Hapus</button></td>
+				</tr>
+				<tr>
+					<td>Ramadhani</td>
+					<td>Web</td>
+					<td><button class="button-edit">Edit</button><button class="button-hapus">Hapus</button></td>
+				</tr>
+				<tr>
+					<td>Gatot</td>
+					<td>Mobile</td>
+					<td><button class="button-edit">Edit</button><button class="button-hapus">Hapus</button></td>
+				</tr>
+			</table>
+		</div>
 	</div>
 </body>
 </html>
