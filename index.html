@@ -17,7 +17,7 @@
       margin: 40px auto;
     }
 		.box-wrapper {
-			display: flex;
+			display: block;
 			width: 90%;
 			margin: 50px auto;
 			justify-content: flex-start;
@@ -77,7 +77,7 @@
     input[type="radio"] {
       margin-left: 15px;
     }
-		input[type="input"] {
+		input[type="text"] {
 			height: 30px;
 			width: 200px;
 			margin: 0 auto;
@@ -154,6 +154,12 @@
       justify-content: center;
       margin-top: 20px;
     }
+		@media only screen and (min-width: 1024px) {
+			.box-wrapper {
+				display: flex;
+			}
+		}
+	
 	</style>
 </head>
 <body>
@@ -163,7 +169,7 @@
 			<h3 class="tengah">Aplikasi apa yang Anda akan buat?</h3>
 			<div class="box-main-wrapper">
 				<div class="box-graph web">
-          <p>40%</p>
+          <p id="p2">40%</p>
 					<label>Web</label>
 				</div>
 				<div class="box-graph mobile">
@@ -176,9 +182,9 @@
 				</div>
 			</div>
 			<hr />
-			<input type="input" name="input"><br>
+			<input type="text" name="input"><br>
 			<div class="wrapper">
-        <input id="web" type="radio" name="gender" value="web" checked>
+        <input id="web" type="radio" name="gender" value="web">
         <label for="web">Web</label>
         <br>
         <input id="desktop" type="radio" name="gender" value="desktop">
@@ -196,7 +202,6 @@
         <caption style="margin: 20px 0 10px 250px;">Total Kumpulan Data Survey</caption>
         <button class="green">+ Tambah Category</button>
       </div>
-      
 			<table style="width: 100%;">
 				<tr>
 					<th>Nama</th>
@@ -249,8 +254,10 @@
         <button>Lihat Semua</button>
         <div></div>
       </div>
-      
 		</div>
 	</div>
+	<script src="app.js">
+	// document.getElementById("p2").style.color = "blue";
+	</script>
 </body>
 </html>
