@@ -43,6 +43,15 @@
 			justify-content: center;
 			color: white;
 		}
+		.box-main-wrapper div {
+			background-color: #80DB72;
+		}
+		.box-main-wrapper div:first-child {
+			background-color: #6DBCCF;
+		}
+		.box-main-wrapper div:last-child {
+			background-color: #E27B78;
+		}
     .box-graph {
       box-sizing: border-box;
       padding: 15px;
@@ -145,9 +154,8 @@
 			background-color: #F4F4F4;
 		}
     .judul-tabel{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+		text-align: center;
+  		font-size: 40px;
     }
     .abu{
       display: flex;
@@ -159,6 +167,11 @@
 			display: flex;
 		}
 	}
+	.border_table{
+		border-left: solid gray;
+		border-right: solid gray;
+
+	}
 	</style>
 </head>
 <body>
@@ -167,60 +180,48 @@
 			<h1 class="tengah">Mini Survey App</h1>
 			<h3 class="tengah">Aplikasi apa yang Anda akan buat?</h3>
 			<div class="box-main-wrapper">
-				<div class="box-graph web">
-          <p id="p2">40%</p>
+				<!-- <div class="box-graph web">
+					<p class="web_percentage">%</p>
 					<label>Web</label>
 				</div>
 				<div class="box-graph mobile">
-          <p>20%</p>
+					<p class="mobile_percentage">20%</p>
 					<label>Mobile</label>
 				</div>
 				<div class="box-graph desktop">
-          <p>40%</p>
+					<p class="desktop_percentage">40%</p>
 					<label>Desktop</label>
-				</div>
+				</div> -->
 			</div>
-			<hr />
-			<input type="text" name="input"><br>
+			<hr/>
+			<input type="text" name="input" class="input_name"><br>
 			<div class="wrapper">
-        <input id="web" type="radio" name="gender" value="Web">
-        <label for="web">Web</label>
-        <br>
-        <input id="desktop" type="radio" name="gender" value="Desktop">
-        <label for="desktop">Desktop</label>
-        <br>
-        <input id="mobile" type="radio" name="gender" value="Mobile">
-        <label for="mobile">Mobile</label>
-        <br><br>
+				<select class="add_type">
+					<option value="web" selected>Web</option>
+					<option value="mobile">Mobile</option>
+					<option value="desktop">Desktop</option>
+				</select>
+        		<br><br>
 			</div>
-      <button class="green button-center">Simpan</button>
+			<button class="green button-center">Simpan</button>
 		</div>
 		<div class="content">
-      <div class="judul-tabel">
-        <div></div>
-        <caption style="margin: 20px 0 10px 250px;">Total Kumpulan Data Survey</caption>
-        <button class="green">+ Tambah Category</button>
-      </div>
-			<table style="width: 100%;">
+			<div class="judul-tabel">
+				Total Kumpulan Data Survey
+			</div>
+			<table style="width: 100%; border: solid gray;" class="list">
 				<tr>
-					<th>Nama</th>
-					<th>Kategory</th>
-					<th>Aksi</th>
+					<th class="border_table" style="border-bottom: solid gray;">Nama</th>
+					<th class="border_table" style="border-bottom: solid gray;">Kategory</th>
+					<th class="border_table" style="border-bottom: solid gray;">Aksi</th>
 				</tr>
-				<tr>
-					<td>Ramadhani</td>
-					<td>Web</td>
-					<td id="td"><button class="yellow button-center">Edit</button><button class="red button-center">Hapus</button></td>
-				</tr>
-      </table>
-      <div class="abu">
-        <div></div>
-        <button>Lihat Semua</button>
-        <div></div>
-      </div>
+			</table>
+			<div class="abu">
+				<button>Lihat Semua</button>
+			</div>
 		</div>
 	</div>
-	<script src="app.js">
+	<script src="app2.js">
 	</script>
 </body>
 </html>

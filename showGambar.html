@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .gambar{
+            visibility: hidden;
+            transition: 1s;
+            width: 300px;
+        }
+        .gambar.pindahkan {
+            transform: translateX(130px);
+        }
+    </style>
+</head>
+<body>
+    <img src="Luffy.png" class="gambar"><br>
+    <button class="buttonTampil">Tampilkan Gambar</button>
+    <button class="buttonPerkecil">Perkecil Gambar</button>
+    <button class="pindahkan">Perkecil Gambar</button>
+</body>
+<script>
+    const gambar = document.querySelector('.gambar');
+    const buttonTampil = document.querySelector('.buttonTampil');
+    const buttonPerkecil = document.querySelector('.buttonPerkecil');
+    const pindah = document.querySelector('.pindahkan');
+    
+    function tampil(){
+        gambar.style.visibility = "visible";
+    }
+
+    function perkecil(){
+        console.log(gambar.style);
+        gambar.style.width = '100px';
+    }
+    function pindahkan() {
+        gambar.classList.add('pindahkan');
+    }
+
+    buttonTampil.addEventListener('click', tampil);
+    buttonPerkecil.addEventListener('click', perkecil);
+    pindah.addEventListener('click', pindahkan);
+</script>
+</html>
